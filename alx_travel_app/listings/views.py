@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import JsonResponse
 
-def dummy_view(request):
-    return HttpResponse("Hello")
+def index(request):
+    return JsonResponse({'status': 'ok', 'app': 'listings'})
