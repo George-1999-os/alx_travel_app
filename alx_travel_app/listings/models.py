@@ -21,3 +21,5 @@ class Review(models.Model):
     rating = models.PositiveSmallIntegerField()
     comment = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
+
+# Create your models her
