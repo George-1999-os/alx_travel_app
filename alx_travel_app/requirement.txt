@@ -1,7 +1,7 @@
-django
-djangorestframework
+Django>=4.2,<5.0
+djangorestframework>=3.14.0
 django-cors-headers
 drf-yasg
 celery
 django-environ
-mysqlclient
+mysqlclient>=2.1.1
