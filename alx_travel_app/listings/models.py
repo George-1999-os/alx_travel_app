@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 class Listing(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
@@ -9,14 +8,12 @@ class Listing(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE, related_name='listings')
     created_at = models.DateTimeField(auto_now_add=True)
 
-
 class Booking(models.Model):
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='bookings')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
     start_date = models.DateField()
     end_date = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
-
 
 class Review(models.Model):
     listing = models.ForeignKey(Listing, on_delete=models.CASCADE, related_name='reviews')
